@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.nav {
+
+}
+ul {
+    list-style: none;
+    overflow: hidden;
+    margin: 20px 0;
+    text-align: center;
+}
+li {
+    display: inline;
+}
+li a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #E3F4F1;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #4C5555;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    transition: 0.3s;
+}
+li a:hover {
+    background-color: white;
+    border-bottom: 4px solid #5AC2AB;
+    color: black;
+}

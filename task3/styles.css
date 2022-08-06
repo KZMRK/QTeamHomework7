@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    background-color: #27AE60;
+    padding: 10px;
+    width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: sans-serif;
+}
+.navbar .logo {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+.navbar .logo img {
+    width: 100%;
+    height: 100%;
+}
+.nav-button {
+    margin-right: 15px;
+}
+.nav-button label {
+    cursor: pointer;
+}
+.nav-button .button-line {
+    height: 5px;
+    width: 60px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 3px;
+}
+.nav-button label div:nth-child(2) {
+    transition: 0.3s ease-in-out;
+}
+.navbar input:checked ~ .nav-button label div:nth-child(2) {
+    opacity: 0;
+}
+.navbar input:checked ~ .nav-button label div:first-child {
+    transform: rotate(42deg);
+    transform-origin: left;
+}
+.navbar input:checked ~ .nav-button label div:last-child {
+    transform-origin: left;
+    transform: rotate(-42deg);
+}
+.nav-button label div:first-child,
+.nav-button label div:last-child {
+    transition: all 0.2s;
+}
+.nav-button .button-line:last-child {
+    margin-bottom: 0;
+}
+.navbar input {
+    display: none;
+}
+.navbar .menu {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    background-color: #27AE60;
+    width: 100%;
+    height: 0;
+    transition: height 0.3s ease-out;
+}
+.navbar .menu > ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.navbar input:checked ~ .menu {
+    height: 350px;
+}
+.navbar input:checked ~ .menu > ul {
+    visibility: visible;
+    opacity: 1;
+}
+.navbar .menu ul {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    top: -50px;
+    float: right;
+    right: 180px;
+}
+.navbar .menu li {
+    margin-bottom: 30px;
+}
+.navbar .menu li a {
+    text-decoration: none;
+    color: #C8F2DF;
+    font-size: 40px;
+}
+.navbar .menu li a:hover {
+    color: white;
+}
